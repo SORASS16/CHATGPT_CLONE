@@ -1,3 +1,4 @@
+// components/GoogleSignInButton.tsx
 "use client"
 import { supabase } from '../utils/supabase/client';
 import { useRouter } from 'next/navigation';

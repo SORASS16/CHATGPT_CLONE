@@ -20,7 +20,7 @@ const formSchema = z.object({
   }),
 });
 
-const InputForm = ({onSubmit} : {onSubmit:any}) => {
+const InputForm = ({onSubmit} : { onSubmit: (values: { username: string }) => void }) => {
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -28,7 +28,7 @@ const InputForm = ({onSubmit} : {onSubmit:any}) => {
     },
   });
 
-  const handleSubmit = (values: any) => {
+  const handleSubmit = (values) => {
     onSubmit(values);
     form.reset();
   };
