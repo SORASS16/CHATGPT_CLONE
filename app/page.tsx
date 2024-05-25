@@ -8,10 +8,10 @@ import { useAuth } from '../hooks/useAuth';
 import GoogleSignInButton from '../components/GoogleSignIn';
 
 export default function Home() {
-  const { user } = useAuth();
+  const { session } = useAuth();
   return (
     <main>
-      {user ? <Chat /> : <GoogleSignInButton />}
+      {!session ? <GoogleSignInButton /> :<Chat/> }
       {/* <NavBar /> */}
       {/* <InputField /> */}
       <Chat />
