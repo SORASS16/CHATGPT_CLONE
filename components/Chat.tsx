@@ -3,6 +3,7 @@ import { useState , useEffect , useRef } from "react";
 import InputForm from "./InputForm";
 import {Card} from "@/components/ui/card";
 import { genAI } from "@/utils/gemini";
+import LogoutButton from "./logoutButton";
 
 
 const Chat = () => {
@@ -86,6 +87,7 @@ const Chat = () => {
         </div>
         <InputForm onSubmit={handleFormSubmit} />
       </Card>
+      <LogoutButton />
     </div>
   );
 };
